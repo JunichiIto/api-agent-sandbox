@@ -7,4 +7,10 @@ class AccessLog
   attribute :status, :integer
   attribute :duration, :float
   attribute :error, :string
+
+  class << self
+    def all
+      AccessLogApi.search
+    end
+  end
 end
