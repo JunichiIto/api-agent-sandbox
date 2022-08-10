@@ -6,7 +6,7 @@ class AccessLog
   attribute :path, :string
   attribute :status, :integer
   attribute :duration, :float
-  attribute :error, :string
+  attribute :error, :string, default: ''
 
   class << self
     def all
