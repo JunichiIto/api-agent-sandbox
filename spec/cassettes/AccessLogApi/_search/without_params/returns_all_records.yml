@@ -1,0 +1,97 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://samples.jnito.com/access-log.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - samples.jnito.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 10 Aug 2022 23:33:09 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '465'
+      Connection:
+      - keep-alive
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+      Cache-Control:
+      - max-age=3600
+      Etag:
+      - '"8351d9f8b5b70adbd920c6e3b413ea91d20a28b5ecafbc4b06f91a4d656d6b7f"'
+      Last-Modified:
+      - Wed, 10 Nov 2021 11:31:47 GMT
+      Strict-Transport-Security:
+      - max-age=31556926
+      Accept-Ranges:
+      - bytes
+      X-Served-By:
+      - cache-itm18841-ITM
+      X-Cache:
+      - HIT
+      X-Cache-Hits:
+      - '2'
+      X-Timer:
+      - S1660174389.361990,VS0,VE0
+      Vary:
+      - x-fh-requested-host, accept-encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=57w3E5dsH9S5fIjTltrBy3xass5SYGxjEy99WKnErFVFHvEkOSQ1NROEJQKOa5enZeufGReHOgv0TF6gix1Ohh4TS1i%2FB%2BrwWIoNj2aCKjOf%2F5RqVZ6zNTRCJawYL1vehfKULQ%3D%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 738c88ed6a84834c-KIX
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        [
+          {
+            "request_id": "1",
+            "path": "/products/1",
+            "status": 200,
+            "duration": 651.7
+          },
+          {
+            "request_id": "2",
+            "path": "/wp-login.php",
+            "status": 404,
+            "duration": 48.1,
+            "error": "Not found"
+          },
+          {
+            "request_id": "3",
+            "path": "/products",
+            "status": 200,
+            "duration": 1023.8
+          },
+          {
+            "request_id": "4",
+            "path": "/dangerous",
+            "status": 500,
+            "duration": 43.6,
+            "error": "Internal server error"
+          }
+        ]
+  recorded_at: Wed, 10 Aug 2022 23:33:09 GMT
+recorded_with: VCR 6.1.0

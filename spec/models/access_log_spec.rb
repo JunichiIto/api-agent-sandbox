@@ -19,12 +19,4 @@ RSpec.describe AccessLog, type: :model do
       )
     end
   end
-
-  describe '.all' do
-    it 'returns all records' do
-      # TODO VCRに置き換える
-      access_logs = AccessLog.all
-      expect(access_logs.size).to eq 4
-    end
-  end
 end
