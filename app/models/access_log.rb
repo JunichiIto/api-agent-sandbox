@@ -8,6 +8,10 @@ class AccessLog
   attribute :duration, :float
   attribute :error, :string, default: ''
 
+  def has_error?
+    status.to_s.match?(/^[45]/)
+  end
+
   class << self
     def all
       AccessLogApi.search
