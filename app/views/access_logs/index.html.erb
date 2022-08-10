@@ -1,19 +1,23 @@
 <h1>AccessLogs#index</h1>
-<table>
-  <tr>
-    <th>request_id</th>
-    <th>path</th>
-    <th>status</th>
-    <th>duration</th>
-    <th>error</th>
-  </tr>
-  <% @access_logs.each do |access_log| %>
+<table class="access-log-table">
+  <thead>
     <tr>
-      <td><%= access_log.request_id %></td>
-      <td><%= access_log.path %></td>
-      <td><%= access_log.status %></td>
-      <td><%= access_log.duration %></td>
-      <td><%= access_log.error %></td>
+      <th>request_id</th>
+      <th>path</th>
+      <th>status</th>
+      <th>duration</th>
+      <th>error</th>
     </tr>
-  <% end %>
+  </thead>
+  <tbody>
+    <% @access_logs.each do |access_log| %>
+      <tr>
+        <td><%= access_log.request_id %></td>
+        <td><%= access_log.path %></td>
+        <td><%= access_log.status %></td>
+        <td><%= access_log.duration %></td>
+        <td><%= access_log.error %></td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
