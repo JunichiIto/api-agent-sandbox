@@ -1,7 +1,7 @@
 class AccessLogApi
   class << self
-    # paramsは検索条件が入力されている想定
     def search(params = {})
+      # paramsを使って柔軟に検索パラメータを追加できる想定（だが、下記URLは静的なレスポンスしか返さないので未実装）
       uri = URI.parse('https://samples.jnito.com/access-log.json')
       json = Net::HTTP.get(uri)
       data_list = JSON.parse(json, symbolize_names: true)
