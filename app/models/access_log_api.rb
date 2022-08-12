@@ -6,7 +6,7 @@ class AccessLogApi
       json = Net::HTTP.get(uri)
       data_list = JSON.parse(json, symbolize_names: true)
       data_list.map do |data|
-        AccessLog.new(**data)
+        AccessLog.new(data)
       end
     end
   end
